@@ -9,7 +9,20 @@ def fetch_news():
 
     response = requests.get(url)
 
-    if response.status_code == 200:
-        return response.json()["articles"]
+    if response.status_code != 200:
+        return []
 
-    return []
+    articles = response.json()["articles"]
+
+    cleaned_articles = []
+
+    for article in articles:
+        cleaned_articles.append({
+            "title": article.get("title"),
+            "source": article.get("source", {}).get("name"),
+            "image": article.get("urlToImage"),
+            "url": article.get("url"),
+            "publishedAt": article.get("publishedAt")
+        })
+
+    return cleaned_articles
