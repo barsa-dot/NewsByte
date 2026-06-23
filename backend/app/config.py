@@ -4,3 +4,5 @@ import os
 load_dotenv()
 
 NEWS_API_KEY = os.getenv("NEWS_API_KEY")
+
+print("LOADED KEY:", NEWS_API_KEY)
