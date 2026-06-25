@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { NewsCard, type NewsArticle } from "./NewsCard";
 
-const API_URL = "http://localhost:8000/news";
+const API_URL = "https://news-byte-eight.vercel.app/news";
 
 function SkeletonCard() {
   return (
