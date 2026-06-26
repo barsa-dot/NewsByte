@@ -7,7 +7,8 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:8080",
+        "http://localhost:5173",
+        "https://news-byte-bwqc.vercel.app",   # your deployed frontend
     ],
     allow_credentials=True,
     allow_methods=["*"],
