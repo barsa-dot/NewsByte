@@ -8,7 +8,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://news-byte-bwqc.vercel.app",   # your deployed frontend
+        "https://news-byte-frontend.vercel.app",   # your deployed frontend
     ],
     allow_credentials=True,
     allow_methods=["*"],
